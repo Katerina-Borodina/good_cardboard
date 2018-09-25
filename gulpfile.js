@@ -1,5 +1,3 @@
-'use strict';
-
 var gulp        = require('gulp'), // Подключаем Gulp
     sass        = require('gulp-sass'), //Подключаем Sass пакет,
     browserSync = require('browser-sync'), // Подключаем Browser Sync
@@ -18,7 +16,7 @@ gulp.task('sass', function() { // Создаем таск Sass
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(gulp.dest('src/css')) // Выгружаем результата в папку src/css
-        .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+        .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
 });
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
@@ -72,7 +70,8 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
         'src/css/style.css',
-        'src/css/libs.min.css'
+        'src/css/libs.min.css',
+        'src/css/bootstrap-grid.min.css'
     ])
         .pipe(gulp.dest('build/css'));
 
