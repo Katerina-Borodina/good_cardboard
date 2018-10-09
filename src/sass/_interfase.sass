@@ -1,3 +1,24 @@
+@import 'variables'
+
+.section-title
+  font-size: 27px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: 0.87
+  letter-spacing: normal
+  text-align: center
+  text-transform: uppercase
+  color: $color_black_title
+  margin-top: 50px
+  margin-bottom: 0
+  &::after
+    content: ''
+    display: block
+    background: url("../img/section-title-line.png") center no-repeat
+    height: 7px
+    padding-top: 40px
+
 .button
   font-size: 14px
   font-weight: 400
@@ -10,9 +31,30 @@
   &:hover
     background-color: lighten($color_tangerine, 5)
     cursor: pointer
-  img
-    vertical-align: middle
   &_big
     padding-top: 16px
     padding-bottom: 16px
     vertical-align: middle
+    &_popup
+      padding: 16px 29px
+  img
+    vertical-align: middle
+  &-o
+    background-color: transparent
+    border: solid 1px #9b9b9b
+    font-size: 15px
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.27
+    letter-spacing: normal
+    text-align: center
+    color: #9b9b9b
+    &:hover
+      background-color: transparent
+      cursor: pointer
+      color: $color_tangerine
+      border-color: $color_tangerine
+
+
+
