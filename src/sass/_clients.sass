@@ -1,0 +1,29 @@
+@import 'variables'
+@import 'interfase'
+
+.clients
+  padding-bottom: 70px
+  .clients-block
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    height: 70vh
+    &__img
+      position: relative
+      margin: 0 auto
+      display: flex
+      flex-basis: 25%
+      min-height: 100px
+      justify-content: center
+      & img
+        position: absolute
+        transition: all .5s ease-in-out
+      & .img_one
+        opacity: 0
+        filter: alpha(opacity=0)
+      &:hover .img_one
+        opacity: 1
+        filter: alpha(opacity=100)
+      &:hover .img_two, & .img_two:hover
+        opacity: 0
+        filter: alpha(opacity=0)

@@ -51,7 +51,7 @@
       color: $color-white
       .form-title
         font-size: 20px
-        font-weight: 200
+        font-weight: 300
         font-style: normal
         font-stretch: normal
         line-height: 1.5
@@ -77,9 +77,22 @@
           flex-basis: 70%
       .form-small
         font-size: 14px
-        font-weight: 200
+        font-weight: 300
         line-height: 2.14
         letter-spacing: 1px
+
+@keyframes move
+  0%
+    opacity: 0
+    margin-bottom: -100px
+  100%
+    opacity: 1
+    margin-bottom: 0
+    transform: rotate(360deg)
+.animate
+  animation: move
+  animation-duration: 2s
+  animation-delay: .4s
 
 
 
