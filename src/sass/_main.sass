@@ -2,85 +2,109 @@
 @import 'interfase'
 
 
-.main
-  position: relative
-  padding:
-    top: 65px
-    bottom: 60px
-  background: $color_black url("../img/main-bg.jpg") 50% 23% no-repeat
-  //background-size: cover
-  z-index: 2
-  &::before
-    content: ''
-    display: block
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0, 0.6)
-    z-index: 0
-  &-img
+.single-item
+  .main
     position: relative
-    &::before
-      content: ''
-      display: block
-      position: absolute
-      border: 1px solid $color_white
-      border-radius: 50%
-      width: 370px
-      height: 370px
-      z-index: -1
-      left: 50%
-      margin-left: -140px
-  &-text
-    color: $color-white
-    &__title
-      font-size: 41px
-      font-weight: 500
-      line-height: 1.02
-      margin: 0 0 10px
-    &__subtitle
-      font-size: 28px
-      font-weight: 300
-      line-height: 1.5
-      padding-bottom: 24px
-    &__form
-      background-color: rgba(#fff, 0.2)
-      padding: 30px
+    padding:
+      top: 65px
+      bottom: 60px
+    background: $color_black url("../img/main/main-bg.jpg") 50% 23% no-repeat
+    //background-size: cover
+    z-index: 2
+    &-img
+      position: relative
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        border: 1px solid $color_white
+        border-radius: 50%
+        width: 370px
+        height: 370px
+        z-index: -1
+        left: 50%
+        margin-left: -140px
+    &-text
       color: $color-white
-      .form-title
-        font-size: 20px
-        font-weight: 200
-        font-style: normal
-        font-stretch: normal
+      &__title
+        font-size: 41px
+        font-weight: 500
+        line-height: 1.02
+        margin: 0 0 10px
+      &__subtitle
+        font-size: 28px
+        font-weight: 300
         line-height: 1.5
-        letter-spacing: 1px
-        padding-right: 87px
-        margin-bottom: 20px
-        &__importan
-          text-transform: uppercase
-          font-weight: 500
+        padding-bottom: 24px
+      &__form
+        background-color: rgba(#fff, 0.2)
+        padding: 30px
+        color: $color-white
+        .form-title
+          font-size: 20px
+          font-weight: 300
+          font-style: normal
+          font-stretch: normal
+          line-height: 1.5
           letter-spacing: 1px
-      .form
-        display: flex
-        justify-content: space-between
-        width: 100%
-        color: $color_black_70
-        padding-bottom: 8px
-        &__input
-          padding: 20px
-          border-radius: 4px
-          border: none
-          vertical-align: middle
-          margin-right: 10px
-          flex-basis: 70%
-      .form-small
-        font-size: 14px
-        font-weight: 200
-        line-height: 2.14
-        letter-spacing: 1px
+          padding-right: 87px
+          margin-bottom: 20px
+          &__importan
+            text-transform: uppercase
+            font-weight: 500
+            letter-spacing: 1px
+        .form
+          display: flex
+          justify-content: space-between
+          width: 100%
+          color: $color_black_70
+          padding-bottom: 8px
+          &__input
+            padding: 20px
+            border-radius: 4px
+            border: none
+            vertical-align: middle
+            margin-right: 10px
+            flex-basis: 70%
+        .form-small
+          font-size: 14px
+          font-weight: 300
+          line-height: 2.14
+          letter-spacing: 1px
+
+@keyframes move
+  0%
+    opacity: 0
+    margin-bottom: -100px
+  100%
+    opacity: 1
+    margin-bottom: 0
+    transform: rotate(360deg)
+.animate
+  animation: move
+  animation-duration: 2s
+  animation-delay: .4s
+  
+.slider-arrow_main 
+  position: absolute
+  margin: 0 10px
+  top: 0
+  width: 22px
+  height: 100%
+  z-index: 4
 
 
+.slider-arrow_main:hover 
+  cursor: pointer
+
+
+.slider-arrow_main__left 
+  left: 0
+  background: url("../img/arrow-left.png") center no-repeat
+
+
+.slider-arrow_main__right 
+  right: 0
+  background: url("../img/arrow-right.png") center no-repeat
 
 

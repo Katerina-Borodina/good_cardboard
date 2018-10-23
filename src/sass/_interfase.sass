@@ -10,7 +10,7 @@
   text-align: center
   text-transform: uppercase
   color: $color_black_title
-  margin-top: 50px
+  margin-top: 0
   margin-bottom: 0
   &::after
     content: ''
@@ -18,6 +18,25 @@
     background: url("../img/section-title-line.png") center no-repeat
     height: 7px
     padding-top: 40px
+
+.nav-border
+  border-right: 1px dotted rgba(255, 255, 255, .2)
+  padding-right: 25px
+
+.margin-left
+  margin-left: 25px
+
+.dark-bg
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: -1
 
 .button
   font-size: 14px
@@ -56,5 +75,29 @@
       color: $color_tangerine
       border-color: $color_tangerine
 
+.slider-arrow 
+  position: absolute
+  margin: 0 10px
+  top: 0
+  width: 22px
+  height: 100%
+  border: 1px solid #ff9d00
+  z-index: 4
+
+.slider-arrow:hover 
+  cursor: pointer
+
+.slider-arrow_left 
+  left: 0
+  background: #fff url("../img/arrow-left.png") center no-repeat
 
 
+.slider-arrow_left:hover 
+  background: #ff9d00 url("../img/arrow-left_active.png") center no-repeat
+
+.slider-arrow_right 
+  right: 0
+  background: #fff url("../img/arrow-right.png") center no-repeat
+
+.slider-arrow_right:hover 
+  background: #ff9d00 url("../img/arrow-right_active.png") center no-repeat

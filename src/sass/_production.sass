@@ -1,0 +1,71 @@
+.production
+  padding-top: 85px
+  padding-bottom: 45px
+
+.slider-for
+  margin-bottom: 13px
+  height: 285px
+  overflow-y: hidden
+
+.slider-nav
+  padding-left: 37px
+  padding-right: 37px
+  height: 95px
+  overflow-y: hidden
+  left: -2%
+  width: 104%
+  .blackout
+    margin: 0 6px
+
+.slick-slide:focus, .slick-current:focus, .slick-active:focus
+  outline: none
+
+.blackout
+  background: #000
+  img
+    opacity: .4
+.slick-current
+  background-color: transparent
+  img
+    opacity: 1
+
+.production-block
+  .production-tittle
+    background-color: $color_tangerine
+    margin:
+      left: -30px
+      bottom: 30px
+      top: 30px
+    h2
+      margin: 0
+      padding: 15px 0 15px 30px
+      color: #fff
+      font-size: 28px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 0.79
+      letter-spacing: normal
+  .production-text
+    p
+      font-size: 16px
+      font-weight: 300
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.5
+      letter-spacing: normal
+      color: $color_black
+      text-align: justify
+
+@media (min-width: 768px) and (max-width: 991px)
+  .hidden-mobile
+    display: none
+
+
+@media (min-width: 576px) and (max-width: 767px)
+  .hidden-mobile
+    display: none
+
+@media (max-width: 575px)
+  .hidden-mobile
+    display: none
