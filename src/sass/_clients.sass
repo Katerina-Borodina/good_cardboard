@@ -9,6 +9,7 @@
     flex-direction: row
     flex-wrap: wrap
     justify-content: center
+    height: 70vh
     &__img
       position: relative
       margin: 0 auto
@@ -25,4 +26,7 @@
       filter: grayscale(100%)
       &:hover
         filter: grayscale(0%)
-      transition: all .5s ease-in-out
+        transition: all .5s ease-in-out
+      & img
+        position: absolute
+        transition: all .5s ease-in-out

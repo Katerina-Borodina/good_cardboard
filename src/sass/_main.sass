@@ -34,6 +34,11 @@
       &__subtitle
         font-size: 28px
         font-weight: 300
+      .form-title
+        font-size: 20px
+        font-weight: 300
+        font-style: normal
+        font-stretch: normal
         line-height: 1.5
         padding-bottom: 24px
       &__form
@@ -101,6 +106,37 @@
 .slider-arrow_main__left 
   left: 0
   background: url("../img/arrow-left.png") center no-repeat
+  .form
+    display: flex
+    justify-content: space-between
+    width: 100%
+    color: $color_black_70
+    padding-bottom: 8px
+    &__input
+      padding: 20px
+      border-radius: 4px
+      border: none
+      vertical-align: middle
+      margin-right: 10px
+      flex-basis: 70%
+  .form-small
+    font-size: 14px
+    font-weight: 300
+    line-height: 2.14
+    letter-spacing: 1px
+
+@keyframes move
+  0%
+    opacity: 0
+    margin-bottom: -100px
+  100%
+    opacity: 1
+    margin-bottom: 0
+    transform: rotate(360deg)
+.animate
+  animation: move
+  animation-duration: 2s
+  animation-delay: .4s
 
 
 .slider-arrow_main__right 
