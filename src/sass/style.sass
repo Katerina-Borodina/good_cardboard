@@ -2,6 +2,51 @@
 @import 'reset'
 @import 'variables'
 @import 'interfase'
+.m-menu
+  margin: 0
+  padding: 0
+  position: fixed
+  height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  list-style: none
+  font-size: 3rem
+  line-height: 55px
+  z-index: 990
+  background-image: linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%)
+  transition: 0.2s
+  transform: translateX(100%)
+  right: 0
+  top: 0
+
+  .close-menu
+    position: fixed
+    font-size: 3rem
+    font-weight: 900
+    color: #fff
+    right: 5rem
+    top: 0
+    cursor: pointer
+
+.m-menu-link
+  display: none
+  color: #323232
+  font-size: 3rem
+  right: 0
+  top: 0
+
+.menu-logo
+  display: flex
+  a.m-menu-link
+    color: #323232
+    margin-right: 13px
+
+.m-menu_activ
+  transform: translateX(0%)
+
 @import 'nav'
 @import 'header'
 @import 'main'
@@ -15,6 +60,7 @@
 @import 'feedback'
 @import 'contacts'
 @import 'modal'
+@import "media"
 
 body
   background: $color_white
